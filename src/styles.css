@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+/* Styles pour le formulaire global */
+form {
+    max-width: 500px;
+    /* Limite la largeur */
+    margin: 0 auto;
+    /* Centre le formulaire */
+    padding: 20px;
+    border: 1px solid #ddd;
+    /* Bordure légère */
+    border-radius: 8px;
+    /* Coins arrondis */
+    background-color: #f9f9f9;
+    /* Fond clair */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Légère ombre */
+}
+
+/* Espacement entre les champs */
+form div {
+    margin-bottom: 15px;
+}
+
+/* Styles pour les labels */
+label {
+    font-weight: bold;
+    display: block;
+    /* Les labels occupent toute la ligne */
+    margin-bottom: 5px;
+    color: #333;
+    /* Texte sombre */
+}
+
+/* Styles pour les inputs */
+input {
+    width: 100%;
+    /* Champs prennent toute la largeur */
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Bordure grise claire */
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Inclut le padding dans la largeur */
+}
+
+/* Couleur différente pour les champs actifs ou invalides */
+input:focus {
+    border-color: #007bff;
+    /* Bordure bleue */
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+    /* Légère ombre */
+}
+
+input.ng-invalid.ng-touched {
+    border-color: red;
+    /* Bordure rouge pour les champs invalides */
+}
+
+/* Bouton de soumission */
+button {
+    display: block;
+    width: 100%;
+    /* Bouton prend toute la largeur */
+    padding: 10px;
+    background-color: #007bff;
+    /* Couleur bleue */
+    color: white;
+    /* Texte blanc */
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Animation de la couleur */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Couleur bleue plus foncée au survol */
+}
+
+button:disabled {
+    background-color: #ccc;
+    /* Bouton grisé si désactivé */
+    cursor: not-allowed;
+}
+
+/* Messages d'erreur */
+p {
+    color: red;
+    /* Texte rouge */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
