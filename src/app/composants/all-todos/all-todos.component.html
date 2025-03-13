@@ -1,0 +1,18 @@
+<div class="todo-container">
+    <h2>Liste des tâches</h2>
+
+    <button class="add-todo-btn" (click)="goToCreateTodo()">➕ Ajouter une tâche</button>
+
+    <ul *ngIf="todos$ | async as todos; else loading">
+        <li *ngFor="let todo of todos" [class.completed]="todo.completed">
+            <span>{{ todo.task }}</span>
+            <button class="validate-btn" (click)="toggleTodo(todo)">
+                ✔
+            </button>
+        </li>
+    </ul>
+
+    <ng-template #loading>
+        <p>Chargement des tâches...</p>
+    </ng-template>
+</div>

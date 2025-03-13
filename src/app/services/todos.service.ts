@@ -12,7 +12,16 @@ export class TodoService {
 
   constructor(private httpClient: HttpClient) { }
 
+  public getTodos(): Observable<any> {
+    return this.httpClient.get(this.url + this.path, { withCredentials: true })
+  }
+
   public createTodo(todoData: { task: string }): Observable<any> {
     return this.httpClient.post(this.url + this.path, todoData, { withCredentials: true });
   }
+
+  updateTodo(todo: any): Observable<any> {
+    return this.httpClient.put(`${this.url}${this.path}/${todo.id}`, todo, { withCredentials: true });
+  }
+
 }

@@ -31,7 +31,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
 
       this.authService.login(this.loginForm).subscribe({
-        next: () => this.router.navigate(['todo/create']),
+        next: () => this.router.navigate(['todos']),
         error: (err: any) => this.errorMessage = err.error.message || 'Erreur de connexion'
       });
     }

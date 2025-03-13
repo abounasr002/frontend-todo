@@ -1,0 +1,122 @@
+/* Conteneur principal */
+.todo-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste des tâches */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+/* Bouton Ajouter une tâche */
+.add-todo-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-todo-btn:hover {
+    background-color: #218838;
+}
+
+/* Élément de la liste */
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style pour une tâche complétée */
+.completed span {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+/* Bouton de validation */
+.validate-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+    width: 10%;
+}
+
+.validate-btn:hover {
+    background-color: #218838;
+}
+
+/* Bouton de suppression */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Conteneur boutons d'action */
+.todo-actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .todo-actions {
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .validate-btn,
+    .delete-btn {
+        width: 48%;
+    }
+}
