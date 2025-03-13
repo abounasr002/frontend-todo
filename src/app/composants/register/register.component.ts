@@ -28,7 +28,7 @@ export class RegisterComponent {
   onSubmit() {
     if (this.registerForm.valid) {
       this.authService.register(this.registerForm.value).subscribe({
-        next: () => this.router.navigate(['/login']),
+        next: () => this.router.navigate(['/']),
         error: (err: any) => this.errorMessage = err.error.message || 'Erreur lors de l\'inscription'
       });
     }

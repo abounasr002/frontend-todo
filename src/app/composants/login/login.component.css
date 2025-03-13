@@ -16,3 +16,7 @@ input {
 .error {
     color: red;
 }
+
+form {
+    margin-bottom: 5px;
+}

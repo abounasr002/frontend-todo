@@ -36,4 +36,11 @@ export class LoginComponent {
       });
     }
   }
+
+  goToRegister() {
+    console.log("register")
+    this.router.navigate(['register'])
+  }
+
+
 }

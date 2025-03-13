@@ -8,4 +8,5 @@
         <button type="submit" [disabled]="loginForm.invalid">Se connecter</button>
     </form>
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+    <button (click)="goToRegister()">register</button>
 </div>
