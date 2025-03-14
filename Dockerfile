@@ -16,8 +16,9 @@ RUN npm run build
 FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-# Remplacez "nom-de-votre-app" par le nom réel du dossier généré dans dist/
-COPY --from=builder /app/dist/fiche-exercice3-angular/browser /usr/share/nginx/html
+
+
+COPY --from=builder /app/dist/angular-project/browser /usr/share/nginx/html
 
 # Exposition du port 80
 EXPOSE 80
