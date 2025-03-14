@@ -3,11 +3,13 @@ import { LoginComponent } from './composants/login/login.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { CreateTodoComponent } from './composants/create-todo/create-todo.component';
 import { AllTodosComponent } from './composants/all-todos/all-todos.component';
+import { NotFoundComponent } from './composants/not-found/not-found.component';
 
 export const routes: Routes = [
     { path: '', component: LoginComponent },
     { path: 'todos', component: AllTodosComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'todo/create', component: CreateTodoComponent }
+    { path: 'todo/create', component: CreateTodoComponent },
+    { path: '**', component: NotFoundComponent }
 
 ];
